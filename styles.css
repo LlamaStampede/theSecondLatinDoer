@@ -1,0 +1,60 @@
+.col1  {width: 8.3%}
+.col2  {width: 16.6%}
+.col3  {width: 25%}
+.col4  {width: 33.3%}
+.col5  {width: 41.6%}
+.col6  {width: 50%}
+.col7  {width: 58.3%}
+.col8  {width: 66.6%}
+.col9  {width: 75%}
+.col10 {width: 83.3%}
+.col11 {width: 91.6%}
+.col12 {width: 100%}
+
+html {
+    height: 100%;
+    background-color: #dddddd;
+}
+
+body {
+    height: 150%;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
+
+#header, footer {
+    height: 200px;
+    background-color: darkturquoise;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    padding-left: 33.3%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+#tableholder {
+    height: 16.6%;
+    padding-left: 75%;
+}
+
+table {
+    position: fixed;
+    top: 33%;
+    width: 20%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
