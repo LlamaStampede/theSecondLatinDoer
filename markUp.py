@@ -51,7 +51,7 @@ for lineID in range(0, len(listOfLines)):
         else:
                 g.write("&nbsp;"*9 + "".join(text) + "\n" + '</div>\n')
         
-
+g.write("<span id='amountOfLines'>" + str(len(listOfLines)) + "</span>")
 g.write('''
             </div>
             <div id="tableholder" class="col2">
@@ -82,6 +82,10 @@ g.write('''
                         </th>
                     </tr>
                 </table>
+                <div class="slidecontainer">
+                    <p>Line: <span id="lineNumber">1</span></p>
+                    <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
+                </div>
             </div>
         </div>
     </body>

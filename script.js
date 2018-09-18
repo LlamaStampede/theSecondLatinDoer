@@ -61,15 +61,18 @@ var slider = document.getElementById("myRange");
 var output = document.getElementById("lineNumber");
 output.innerHTML = slider.value;
 
+slider.setAttribute("max", Number(document.getElementById("amountOfLines").innerHTML));
+document.getElementById("amountOfLines").style.display = "none";
+
 slider.oninput = function() {
     output.innerHTML = this.value;
     var lines = document.getElementsByClassName("line");
-    var maxLine = 20 + Number(this.value)
+    var maxLine = 20 + Number(this.value-1)
     for (var i = 0; i < lines.length; i++) {
         var id = lines[i].getAttribute("id");
         var display = lines[i].getAttribute("display");
 
-        if (Number(id) < Number(this.value) || Number(id) > maxLine) {
+        if (Number(id) < Number(this.value-1) || Number(id) > maxLine-1) {
             lines[i].style.display = "none";
         }
         else {
