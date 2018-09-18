@@ -42,3 +42,39 @@ function mouseLeave(item) {
         document.getElementById("current").innerHTML = "click on or hover over a word";
     }
 }
+
+
+function shorten() {
+    var number = 20;
+    var lines = document.getElementsByClassName("line");
+    for (var i = 0; i < lines.length; i++) {
+        var id = lines[i].getAttribute("id");
+        if (id > number-1) {
+            lines[i].style.display = "none";
+        }
+    }
+}
+
+shorten()
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("lineNumber");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    var lines = document.getElementsByClassName("line");
+    var maxLine = 20 + Number(this.value)
+    for (var i = 0; i < lines.length; i++) {
+        var id = lines[i].getAttribute("id");
+        var display = lines[i].getAttribute("display");
+
+        if (Number(id) < Number(this.value) || Number(id) > maxLine) {
+            lines[i].style.display = "none";
+        }
+        else {
+            lines[i].style.display = "inherit";
+        }
+        
+    }
+}

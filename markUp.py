@@ -28,7 +28,7 @@ g.write('''
 punc = [".", ",", "!", "?", ";", ":", "“", " ", "(", ")"]
 wordsSoFar = 0
 for lineID in range(0, len(listOfLines)):
-        g.write('<div id="line' + str(lineID) + '">\n')
+        g.write('<div class="line" id="' + str(lineID) + '">\n')
         puncSoFar = 0
         text = []
         
@@ -52,7 +52,7 @@ for lineID in range(0, len(listOfLines)):
                 g.write("&nbsp;"*9 + "".join(text) + "\n" + '</div>\n')
         
 
-g.write('''</div>
+g.write('''
             </div>
             <div id="tableholder" class="col2">
                 <table>
